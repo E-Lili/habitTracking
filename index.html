@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+</head>
+
+<style>
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Inter','Nunito', serif;
+    background-color: #D9D9D9;
+    box-sizing: border-box;
+  }
+  .checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #b3b3b3;
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+  }
+
+  .checkbox:hover {
+    border: 1px solid #333;
+  }
+
+  .checkbox:checked {
+    background: #333;
+  }
+
+  .checkbox:checked::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 150%;
+    text-align: center;
+    color: #fff;
+  }
+
+  .main1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 40px 45px 40px 45px;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  .checkbox-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 46px 35px 46px 35px;
+    border-radius: 20px;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    flex-grow: 2;
+    overflow-y: auto;
+  }
+
+  .del {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rc {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 40px;
+  }
+
+  .blocks {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 26px 17px 26px 17px;
+    border-radius: 20px;
+  }
+
+  .button2 {
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    background-color: #E9E7E7;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+  }
+
+  .button2:nth-child(2):hover {
+    background-color: #E9E7E7;
+  }
+
+  .button2:nth-child(2) {
+    background-color: #C3C3C3;
+    margin-top: 14px;
+  }
+ .done-full {
+  position: relative;
+ }
+  .done {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 34px;
+    background-color: #686868;
+    color: white;
+    font-size: 25px;
+    border-radius: 7px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+  }
+
+.taskWidgetProgressRing {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  position: relative;
+  margin: 30px 48px 30px 48px;
+}
+
+.taskWidgetProgressRing__svg {
+  transform: rotate(-90deg); 
+  overflow: visible;
+}
+.taskWidgetProgressRing__background {
+  fill: none;
+  stroke: #484848; 
+}
+.taskWidgetProgressRing__circle {
+  fill: none; 
+  stroke: white; 
+  stroke-dashoffset: 358.142; 
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+.taskWidgetProgressRing__text {
+  position: absolute;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 21px;
+  color: #fff;
+  color: white;
+  text-align: center;
+}
+  .text {
+    margin: 10px 15px 10px 10px;
+  }
+  .pencil {
+    position: absolute;
+    right: -22px;
+    bottom: -60px;
+    z-index: 2;
+  } 
+  .nav {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 257px;
+    height: 82px;
+    border-radius: 20px;
+    margin: 40px auto;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  }
+  .nav1 {
+    padding: 10px 20px 10px 20px;
+  }
+  .checkbox:checked + span {
+    text-decoration: line-through;
+    color: #B3B3B3;
+  }
+
+</style>
+
+<body>
+  <main class="main1">
+    <h1></h1>
+    <section class="blocks">
+      <form class="checkbox-form"></form>
+
+      <section class="rc">
+        <form class="button">
+          <input class="button2" type="text" id="addHabit" placeholder="Add new habit">
+          <button id="add-new-habit" type="button" class="button2">Add new habit</button>
+        </form>
+        <form class="done-full">
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="nav">
+     <div class="nav1" onclick="document.location.href = 'index.html';" style="cursor:pointer;">
+        <svg
+          width="66"
+          height="63"
+          viewBox="0 0 66 63"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="nov1.svg"></use>
+        </svg>
+      </div>
+      <div class="nav1" onclick="document.location.href = 'index2.html';" style="cursor:pointer;">
+        <svg
+          width="66"
+          height="63"
+          viewBox="0 0 66 63"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="nov2.svg"></use>
+        </svg>
+      </div>
+  </footer>
+  <script src="general.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

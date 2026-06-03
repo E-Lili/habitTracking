@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страница2</title>
+  
+</head>
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: 'Inter', 'Nunito', 'Rubik', serif;
+      background-color: #d9d9d9;
+      box-sizing: border-box;
+    }
+    .main2 {
+      width: calc(100% - 104px);
+      margin: 55px 52px 55px 52px;
+      background-color: white;
+      border-radius: 20px;
+    }
+    .table {
+      width: calc(100% - 60px);
+      margin: 10px 30px 30px 30px;
+      background-color: #ffffff;
+      border-collapse: separate;
+      border-spacing: 10px;
+      position: relative;
+      border: none;
+      border-collapse: collapse;
+    }
+
+    .table th, .table td {
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    .rowDate {
+      width: calc(100% - 60px);
+      background-color: black;
+      color: white;
+      border-radius: 8px;
+      margin: 30px 30px 0px 30px;
+      font-size: 24px;
+      font-weight: 400;
+      padding-right: 0;
+    }
+    .rowDate th:first-child {
+      width: 320px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .rowDate th:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .doneHab {
+      font-size: 24px;
+    }
+
+    .nav {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 257px;
+      height: 82px;
+      border-radius: 20px;
+      margin: 40px auto;
+      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    }
+    .nav1 {
+      padding: 10px 20px 10px 20px;
+    }
+
+    .mainBlock {
+      font-family: 'Rubik';
+      background-color: white;
+      border-radius: 22px;
+      margin-left: 52px;
+      margin-right: 65px;
+      padding: 0px 285px 40px 42px;
+      background-image: url('fondone.svg');
+      background-size: contain;
+      box-shadow: 0px 10px 22px #95ADFE4D;
+    }
+
+    .blocks {
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+    .percent {
+      color: #B0B0B0;
+      font-size: 14px;
+      margin: 30px 17px 30px 17px;
+    }
+    .titleHab {
+      color: #2F2F2F;
+      font-size: 16px;
+      font-weight: 700;
+      height: 22px;
+      width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .target {
+      color: #2F2F2F;
+      font-size: 14px;
+      font-weight: 400;
+      font-style: Medium;
+    }
+
+    .notDone {
+      color: #B0B0B0;
+      font-size: 14px;
+      margin: 30px 17px 30px 17px;
+    }
+    .done {
+      color: #37C871;
+      font-size: 14px;
+      margin: 30px 17px 30px 17px;
+    }
+    
+    .textBlock {
+      font-family: 'Nunito', serif;
+      display: flex;
+      flex-direction: column;
+    }  
+    .habitDone {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+      height: 208px;
+      width: 670px;
+      overflow-y:auto;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+    }
+   
+  </style>
+
+  <body>
+    <main class="main2">
+      <table class="table">
+        <thead class="rowDate">
+          <tr>
+          </tr>
+        </thead>
+
+        <tbody class="doneHab">
+        </tbody>
+      </table>
+    </main>
+   <section class="content">
+    <div class="mainBlock">
+    </div>
+    <div class="habitDone">
+    </div>
+   </section>
+
+
+    <footer class="nav">
+       <div class="nav1" onclick="document.location.href = 'index.html';" style="cursor:pointer;">
+        <svg
+          width="66"
+          height="63"
+          viewBox="0 0 66 63"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="nov1.svg"></use>
+        </svg>
+      </div>
+      <div class="nav1" onclick="document.location.href = 'index2.html';" style="cursor:pointer;">
+        <svg
+          width="66"
+          height="63"
+          viewBox="0 0 66 63"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="nov2.svg"></use>
+        </svg>
+      </div>
+    </footer>
+    
+    <script src="general.js"></script> 
+    <script src="script2.js"></script>
+  </body>
+</html>
